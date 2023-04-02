@@ -11,9 +11,24 @@
 </head>
 
 <body class="conteudo">
-    <h1>Flappy Bird</h1>
+    <!-- <h1>Flappy Bird</h1> -->
     <div wm-flappy>
+        <div class="home">
+            <h1>Flappy Bird</h1>
+            <img class="bird-img" src="./imgs/dragon2.gif" alt="" />
+
+            <div class="form">
+                <select class="form-control" id="level">
+                    <option value="">-- Select the level --</option>
+                    <option value="easy">Easy</option>
+                    <option value="normal">Normal</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button class="btn" onclick="initGame()">Play</button>
+        </div>
     </div>
+
     <script type='text/javascript' src="./flappy.js"></script>
 </body>
 

@@ -5,20 +5,35 @@
   font-family: 'Pixel';
   src: url('../fonts/Pixel.ttf');
 }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 [wm-flappy] {
   position: relative;
   border: 5px solid dodgerblue;
   height: 700px;
   width: 1200px;
   margin: 15px;
-  background-color: deepskyblue;
+  background-image: url(../imgs/cen1.jpeg);
   overflow: hidden;
 }
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Pixel';
+}
+.bird-img {
+  display: block;
+  width: 150px;
+}
+
 .passaro {
   position: absolute;
   width: 60px;
   left: calc(50% - 30px);
-  bottom: 50%;
 }
 .par-de-barreiras {
   position: absolute;
@@ -36,15 +51,27 @@
 .barreira .borda {
   height: 30px;
   width: 130px;
-  background: linear-gradient(90deg, #639301, #a5e82e);
-  border: 2px solid #000;
+  background-color: #1a1c27;
+  background-image: linear-gradient(
+    66deg,
+    #1a1c27 0%,
+    #271826 62%,
+    #dfa743 100%
+  );
+  border: 1px solid #000;
 }
 .barreira .corpo {
   height: 150px;
   width: 110px;
-  background: linear-gradient(90deg, #639301, #a5e82e);
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
+  background-color: #1a1c27;
+  background-image: linear-gradient(
+    66deg,
+    #1a1c27 0%,
+    #271826 62%,
+    #dfa743 100%
+  );
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 .progresso {
   position: absolute;
@@ -52,4 +79,12 @@
   right: 10px;
   font-family: 'Pixel';
   font-size: 70px;
+  z-index: 100;
+}
+.reset {
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  font-family: 'Pixel';
+  font-size: 32px;
 }
